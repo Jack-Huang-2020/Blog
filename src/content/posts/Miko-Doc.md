@@ -4,7 +4,7 @@ published: 2026-05-04
 updated: 2026-07-07
 pinned: true
 description: ୧⍤⃝ NewMiko Document ☃
-tags: [NewMiko]
+tags: [微信模块]
 category: 教程
 licenseName: CC BY-NC-SA 4.0
 draft: false
