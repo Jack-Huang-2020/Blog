@@ -118,9 +118,12 @@ export const siteConfig: SiteConfig = {
 		defaultMode: "list",
 		// 移动端默认布局模式，不设置则跟随 defaultMode
 		mobileDefaultMode: "grid",
-		// 是否在文章列表中显示标签
+		// 是否允许用户切换布局
 		allowSwitch: true,
-		// 网格布局配置，仅在 defaultMode 为 "grid" 或允许切换布局时生效
+		// 文章简介显示行数，设为 0 则不截断
+		descriptionLines: 2,
+		// 文章卡片底部统计和发布日期是否显示图标
+		showStatsIcons: true,
 		// 标签显示位置
 		// 设置为"meta"：显示在文章标题下的元数据
 		// 设置为"bottom"：顶替stats在底部显示
