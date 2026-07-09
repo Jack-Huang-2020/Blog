@@ -142,16 +142,9 @@ slug: WeKit-Doc
 ![KernelSU Next](WeKit-Doc.assets/KernelSU%20Next.png)
 [/grid]
 
-### Step 2️⃣ 下载 Zygisk 实现模块 [ReZygisk](https://github.com/PerformanC/ReZygisk) 或者 [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) 并刷入
+### Step 2️⃣ 下载 Zygisk 实现模块 [ReZygisk](https://github.com/PerformanC/ReZygisk) 并刷入
 
 ::github{repo="PerformanC/ReZygisk"}
-
-::github{repo="Dr-TSNG/ZygiskNext"}
-
-> [!NOTE]
-> *至于为什么有两个模块这件事么……是这样的： https://github.com/Dr-TSNG/ZygiskNext 一段时间前停止了开源 然后就有人搞了个开源的 https://github.com/PerformanC/ReZygisk 出来
-> 从安全性的角度 本人更建议 https://github.com/PerformanC/ReZygisk 毕竟闭源的模块的安全性么……这就全看模块作者良心了
-> 但是吧 https://github.com/PerformanC/ReZygisk 这模块也是刚刚出来的 稳定性这块还是差一点的（虽然本人目前用着也没发现大问题）所以你自己取舍吧*
 
 ### Step 3️⃣ 下载  并且刷入
 
@@ -217,6 +210,7 @@ slug: WeKit-Doc
 - ![Github Action](WeKit-Doc.assets/Action.png)
 
 5. 页面滑到底 戳 `wekit-apk` 旁边的下载按钮
+5. ![Download](WeKit-Doc.assets/Download.jpg)
 
 ### Step 2️⃣ 安装  WeKit 并在 LSPosed 里激活  WeKit
 
