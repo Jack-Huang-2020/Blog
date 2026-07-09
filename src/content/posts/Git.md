@@ -8,6 +8,5 @@ tags: [Github]
 category: 教程
 licenseName: CC BY-NC-SA 4.0
 draft: true
-image: 
 slug: Git
 ---
