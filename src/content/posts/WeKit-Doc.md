@@ -142,9 +142,16 @@ slug: WeKit-Doc
 ![KernelSU Next](WeKit-Doc.assets/KernelSU%20Next.png)
 [/grid]
 
-### Step 2️⃣ 下载 Zygisk 实现模块 [ReZygisk](https://github.com/PerformanC/ReZygisk) 并刷入
+### Step 2️⃣ 下载 Zygisk 实现模块 [ReZygisk](https://github.com/PerformanC/ReZygisk) 或者 [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext)并刷入
 
 ::github{repo="PerformanC/ReZygisk"}
+
+::github{repo="Dr-TSNG/ZygiskNext"}
+
+> [!NOTE]
+> *至于为什么有两个模块这件事么……是这样的： https://github.com/Dr-TSNG/ZygiskNext 一段时间前停止了开源 然后就有人搞了个开源的 https://github.com/PerformanC/ReZygisk 出来
+> 从安全性的角度 本人更建议 https://github.com/PerformanC/ReZygisk 毕竟闭源的模块的安全性么……这就全看模块作者良心了
+> 但是吧 https://github.com/PerformanC/ReZygisk 这模块也是刚刚出来的 稳定性这块还是差一点的（虽然本人目前用着也没发现大问题）所以你自己取舍吧*
 
 ### Step 3️⃣ 下载  并且刷入
 
@@ -234,3 +241,38 @@ slug: WeKit-Doc
 [/grid]
 
 ---
+
+# About us
+
+** WeKit 是一个功能丰富的微信 Xposed 模块，提供大量微信增强功能，涵盖聊天体验、界面美化、隐私保护、自动化等多个方面。 **
+
+## 特色功能
+
+- 基于 JavaScript 和 ~~*[WAuxiliary](https://github.com/HdShare/WAuxiliary_Public)*~~ Jvav 的脚本引擎
+- 贴纸包同步 (Telegram Stickers Sync)
+- 通知进化 (`MessagingStyle`)
+- Markdown 消息渲染
+- 指纹支付 (基于 TEE 的安全加密)
+- 自动抢红包
+- 单向删除好友检测
+- 发送 SILK/MP3 语音
+- 聊天工具栏
+- 发送卡片消息
+- 原生 Hook
+- ~~支持免 Root 框架~~ 
+
+[![CI 状态](https://github.com/Ujhhgtg/WeKit/actions/workflows/ci.yml/badge.svg)](https://github.com/Ujhhgtg/WeKit/actions/workflows/ci.yml)
+
+### 致谢
+
+[WeKit 上游](https://github.com/cwuom/WeKit)
+
+[WAuxiliary](https://github.com/HdShare/WAuxiliary_Public)
+
+[NewMiko](https://github.com/dartcv/NewMiko/blob/archives/)
+
+[QAuxiliary](https://github.com/cinit/QAuxiliary)
+
+[FingerprintPay](https://github.com/eritpchy/FingerprintPay)
+
+[WADN](https://github.com/Ujhhgtg/wauxv_deobf_new) [WAD](https://github.com/Ujhhgtg/wauxv_deobf)
