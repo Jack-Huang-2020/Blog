@@ -66,7 +66,7 @@ set(OUTPUT_DIR "build/${CONFIG}/obj")
 
 你的 Linux 队友不用想这些。你的 macOS 队友也不用想这些。只有你。
 
-你用 Nushell 或者 PowerShell Core？Nushell 是结构化 Shell，它懂表格，懂数据流，但它不懂为什么 Windows 的世界里到处都是反斜杠。启动是快了，试试在里面执行一个 Windows 原生命令，返回一个路径 —— 给的是 `C:\Users\user\project`。你要把这个路径传给下一个命令，下一个命令期望的是 `C:/Users/user/project`。或者反过来。你可以在脚本里用 `str replace` 把 `\` 换成 `/`，但你每写一个 pipeline 都要做一次。你的脚本变得又臭又长。
+你用 Nushell 或者 PowerShell Core？Nushell 是结构化 Shell，它懂表格，懂数据流，但它不懂为什么 Windows 的世界里到处都是反斜杠。启动是快了，试试在里面执行一个 Windows 原生命令，返回一个路径 —— 给的是 `C:\Users\JH\project`。你要把这个路径传给下一个命令，下一个命令期望的是 `C:/Users/JH/project`。或者反过来。你可以在脚本里用 `str replace` 把 `\` 换成 `/`，但你每写一个 pipeline 都要做一次。你的脚本变得又臭又长。
 
 你的 Linux 队友，打开终端，瞬间。输入命令，路径永远是 `/` 分隔，永远不会错。他们不知道你在经历什么。
 
@@ -131,7 +131,7 @@ Git 有 `core.autocrlf`。你设成 `true`，它会在 checkout 时把 LF 转成
 
 WSL 1 是翻译层，把 Linux 系统调用翻译成 Windows 系统调用。慢得一塌糊涂，I/O 性能像在爬。
 
-WSL 2 跑了一个真正的 Linux 内核在 Hyper-V 虚拟机里。性能好了，但你的文件在哪？你在 `/home/user/project` 下，这个目录实际在虚拟硬盘文件里。你想访问 Windows 的 `C:\Users\user\project`？可以，它在 `/mnt/c/` 下面。但访问 `/mnt/c/` 的性能 **又回到了 WSL 1 的水平**，因为要经过 9p 协议来回转换。
+WSL 2 跑了一个真正的 Linux 内核在 Hyper-V 虚拟机里。性能好了，但你的文件在哪？你在 `/home/JH/project` 下，这个目录实际在虚拟硬盘文件里。你想访问 Windows 的 `C:\Users\JH\project`？可以，它在 `/mnt/c/` 下面。但访问 `/mnt/c/` 的性能 **又回到了 WSL 1 的水平**，因为要经过 9p 协议来回转换。
 
 所以你在 WSL 里工作的最佳实践是什么？**把代码放在 WSL 自己的文件系统里**。也就是说，你不用 Windows 的文件系统了。你的编辑器呢？你可以在 Windows 上用 VS Code 连接 WSL，通过 Remote - WSL 插件。VS Code 在 Windows 上跑界面，后端在 WSL 里跑。
 
