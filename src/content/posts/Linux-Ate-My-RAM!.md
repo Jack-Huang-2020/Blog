@@ -32,7 +32,7 @@ sourceLink: https://www.linuxatemyram.com/
 
 如果你的应用程序需要更多内存，内核会**收回磁盘缓存先前借走的那部分内存**，因此磁盘缓存**随时可以立即归还给应用程序**！Linux 其实没有吃掉你任何一部分内存，它只是在最大化利用空闲的内存，在你不需要用内存的时候用空闲的内存给你换更好的体验！
 
-## 所以我需要更多的交换空间（SWAP 也就是虚拟内存）吗？
+## 所以我需要更多的交换空间（`SWAP` 也就是虚拟内存）吗？
 
 大概率**不需要**，因为磁盘缓存主要借用的是应用程序当前未占用的内存，当应用程序需要更多内存时，Linux 内核会从磁盘缓存中拿回来
 
@@ -50,11 +50,11 @@ sourceLink: https://www.linuxatemyram.com/
 echo 3 | sudo tee /proc/sys/vm/drop_caches
 ```
 
-## 既然内存完全够用，为什么 top/htop/btop 和 free 命令显示的“🆓”内存那么少？
+## 既然内存完全够用，为什么 `top/htop/btop` 和 `free` 命令显示的“`Free`”内存那么少？
 
 这只是术语上的差异：
 
-你和 Linux 都认为**应用程序占用的内存是“Used（*已用内存*）”**，而**完全没被使用的内存是“Free（*空闲内存*）”**
+你和 Linux 都认为**应用程序占用的内存是“`Used`（*已用内存*）”**，而**完全没被使用的内存是“Free（*空闲内存*）”**
 
 但是，对于当前正被用于某种用途（*比如被拿来当做磁盘缓存的内存*）、但依然可以提供给应用程序使用的内存，换作你，你会怎么描述呢？
 
@@ -66,13 +66,13 @@ echo 3 | sudo tee /proc/sys/vm/drop_caches
 | 已被使用，但可以释放出来供应用程序使用 | ***空闲或可用（Free or Available）*** | ***可用（Available）*** |
 |               完全未使用               |             空闲（Free）              |      空闲（Free）       |
 
-这部分“***干着别的事***”的内存:spoiler[（***大致***）]就是 top/htop/btop 和 free 命令中称为“Bufferd（*缓冲区*）”和“Cached(*缓存*)”的部分
+这部分“***干着别的事***”的内存:spoiler[（***大致***）]就是 `top/htop/btop` 和 `free` 命令中称为“Bufferd（*缓冲区*）”和“Cached(*缓存*)”的部分
 
 但是由于你和 Linux 的**描述方式不同**，你**可能会在内存充裕的情况下误以为内存不足**
 
 ## 那怎么才能看到我到底还有多少真正的空闲内存？
 
-要查看你的应用程序**在不使用交换空间的情况下**能使用多少内存，请运行 `free -m` 并查看“available”列：
+要查看你的应用程序**在不使用交换空间的情况下**能使用多少内存，请运行 `free -m` 并查看“`available`”列：
 
 ```bash
   JH on Monday at 8:39 PM                                                            0.764s  MEM: 77.51% (12/16GB)
@@ -82,11 +82,11 @@ echo 3 | sudo tee /proc/sys/vm/drop_caches
   Swap:          1000        35.3         988
 ```
 
-（对于 **2014 年及以前安装的发行版**，请**查看**“-/+ buffers/cache”行中的**“free”列**）
+（对于 **2014 年及以前安装的发行版**，请**查看**“`-/+ buffers/cache`”行中的“`free`”列）
 
-这个值就是你的答案（*单位 MiB*）。如果你只是单纯地看“free”，你以为内存已经使用了 99%，但实际上它才用了 41% 罢了！
+这个值就是你的答案（*单位 MiB*）。如果你只是单纯地看“`free`”，你以为内存已经使用了 99%，但实际上它才用了 41% 罢了！
 
-*如果想从更详细、技术性的角度了解 Linux 到底把什么算作 "available"，可以参见[引入该字段的提交（Commit）记录](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=34e431b0ae398fc54ea69ff85ec700722c9da773)*
+*如果想从更详细、技术性的角度了解 Linux 到底把什么算作 "`available`"，可以参见[引入该字段的提交（Commit）记录](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=34e431b0ae398fc54ea69ff85ec700722c9da773)*
 
 ## 所以我应该何时开始担心内存不够用了？
 
@@ -110,6 +110,10 @@ echo 3 | sudo tee /proc/sys/vm/drop_caches
 
 > [!NOTE]
 > **[LinuxAteMyRam.com](LinuxAteMyRam.com)** 由 [VidarHolen.net](http://www.vidarholen.net/) 倾情奉献 本网站已[在 GitHub 上开源](https://github.com/koalaman/linuxatemyram.com)，欢迎提出建议或提交 PR
+>
+> > [!TIP]
+> >
+> > 此博客也已[在 Github 开源](https://github.com/Jack-Huang-2020/jack-huang-2020.github.io)，欢迎提出建议或提交 PR
 >
 > > [!CAUTION]
 > >
